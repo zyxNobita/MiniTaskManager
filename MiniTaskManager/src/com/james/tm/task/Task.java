@@ -1,11 +1,14 @@
 package com.james.tm.task;
 
 import com.james.tm.handler.interfaces.IHandler;
+import com.james.tm.log.Log;
 import com.james.tm.task.interfaces.ITask;
 
 public class Task implements ITask {
 
 	public IHandler handler;
+	
+	public static final String TAG = Task.class.getSimpleName();
 
 	public Task() {
 
@@ -18,7 +21,7 @@ public class Task implements ITask {
 	@Override
 	public void run() {
 		// TODO Auto-generated method stub
-		System.out.println("mytask");
+		Log.d(TAG, "mytask");
 	}
 
 	public static class Builder {

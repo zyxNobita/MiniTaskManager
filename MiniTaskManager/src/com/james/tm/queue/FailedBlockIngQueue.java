@@ -1,7 +1,7 @@
-package com.james.tm.blockingqueue;
+package com.james.tm.queue;
 
 
-import com.james.tm.blockingqueue.interfaces.IBaseBlockingQueue;
+import com.james.tm.queue.interfaces.IBaseBlockingQueue;
 import com.james.tm.task.Task;
 
 /**

@@ -1,8 +1,8 @@
 package com.james.tm.task;
 
-import com.james.tm.blockingqueue.FailedBlockIngQueue;
 import com.james.tm.handler.interfaces.IHandler;
 import com.james.tm.log.Log;
+import com.james.tm.queue.FailedBlockIngQueue;
 
 public class MiniRunnable implements Runnable {
 
@@ -35,7 +35,7 @@ public class MiniRunnable implements Runnable {
 			this.handler.back("hello world!!!");
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
-			Log.d(TAG, e.getLocalizedMessage());
+			Log.e(TAG, e);
 			this.handler.back("e.getLocalizedMessage()");
 			FailedBlockIngQueue.getInstance().add(task);
 		}

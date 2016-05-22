@@ -1,4 +1,4 @@
-package com.james.tm.blockingqueue;
+package com.james.tm.queue;
 
 public abstract class AbstractBlockingQueueFactory {
 

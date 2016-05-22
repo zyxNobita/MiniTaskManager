@@ -1,6 +1,6 @@
 package com.james.tm.taskmanage;
 
-import com.james.tm.blockingqueue.TaskBlockingQueue;
+import com.james.tm.queue.TaskBlockingQueue;
 import com.james.tm.task.Task;
 
 /**

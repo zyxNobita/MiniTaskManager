@@ -10,10 +10,10 @@ import java.util.concurrent.FutureTask;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 
-import com.james.tm.blockingqueue.TaskBlockingQueue;
 import com.james.tm.handler.BaseHandler;
 import com.james.tm.handler.interfaces.IHandler;
 import com.james.tm.log.Log;
+import com.james.tm.queue.TaskBlockingQueue;
 import com.james.tm.task.MiniCallable;
 import com.james.tm.task.MiniRunnable;
 import com.james.tm.task.Task;
@@ -37,14 +37,16 @@ public class MainTest {
 
 		MtmManager.initialize();
 
-		Task mytask = new Task.Builder().handler(new IHandler() {
+		Task mytask = new Task.Builder().
+				handler(new IHandler() {
 
 			@Override
 			public <T> void back(T t) {
 				// TODO Auto-generated method stub
 				Log.d(TAG, "back\n" + t);
 			}
-		}).build();
+		}).
+		build();
 
 		TaskManager.addTask(mytask);
 		Thread.sleep(5000);

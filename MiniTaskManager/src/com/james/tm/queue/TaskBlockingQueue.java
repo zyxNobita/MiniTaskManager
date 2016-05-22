@@ -1,4 +1,4 @@
-package com.james.tm.blockingqueue;
+package com.james.tm.queue;
 
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -7,9 +7,9 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.FutureTask;
 import java.util.concurrent.LinkedBlockingQueue;
 
-import com.james.tm.blockingqueue.interfaces.IBaseBlockingQueue;
 import com.james.tm.handler.interfaces.IHandler;
 import com.james.tm.log.Log;
+import com.james.tm.queue.interfaces.IBaseBlockingQueue;
 import com.james.tm.task.MiniRunnable;
 import com.james.tm.task.Task;
 import com.james.tm.taskmanage.MiniExecutorService;
@@ -127,7 +127,11 @@ public class TaskBlockingQueue implements IBaseBlockingQueue {
 		Log.d(TAG, "11111 == " + count);
 		FutureTask<?> futuretask = futures.get(mytask.hashCode());
 		if (futuretask != null) {
-			futuretask.cancel(true);
+			if(!futuretask.isCancelled()){
+				futuretask.cancel(true);
+				return SUCCESS;
+			}
+			
 		}
 		return FAIL;
 	}

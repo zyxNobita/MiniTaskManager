@@ -1,4 +1,4 @@
-package com.james.tm.blockingqueue.interfaces;
+package com.james.tm.queue.interfaces;
 
 import com.james.tm.task.Task;
 

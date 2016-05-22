@@ -1,6 +1,6 @@
 package com.james.tm.taskmanage;
 
-import com.james.tm.blockingqueue.BlockingQueueFactory;
+import com.james.tm.queue.BlockingQueueFactory;
 
 /**
  * 用于初始化 管理［程序启动时运行］
