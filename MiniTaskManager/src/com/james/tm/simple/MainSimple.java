@@ -29,9 +29,9 @@ import com.james.tm.taskmanage.TaskManager;
  * @author james
  * 
  */
-public class MainTest {
+public class MainSimple {
 
-	private static final String TAG = MainTest.class.getSimpleName();
+	private static final String TAG = MainSimple.class.getSimpleName();
 
 	public static void main(String[] args) throws InterruptedException {
 
@@ -53,9 +53,4 @@ public class MainTest {
 		TaskManager.cancelTask(mytask);
 	}
 
-	// T 的示例
-	public static <T> T back(T t) {
-
-		return t;
-	}
 }
