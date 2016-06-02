@@ -25,4 +25,5 @@ public class Log extends Logger{
 	public static void e(String tag, Throwable t){
 		Log.getLogger(tag).error(tag, t);
 	}
+	
 }

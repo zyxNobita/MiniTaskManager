@@ -1,4 +1,4 @@
-package com.james.tm.test;
+package com.james.tm.simple;
 
 import java.util.ArrayList;
 import java.util.List;

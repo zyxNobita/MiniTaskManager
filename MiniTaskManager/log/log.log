@@ -1,9 +1,9 @@
-2016-05-22 21:12:21  [ main:0 ] - [ DEBUG ]  init
-2016-05-22 21:12:21  [ pool-1-thread-1:13 ] - [ DEBUG ]  loop
-2016-05-22 21:12:21  [ pool-1-thread-1:15 ] - [ DEBUG ]  count == 1
-2016-05-22 21:12:21  [ pool-2-thread-1:16 ] - [ DEBUG ]  mytask
-2016-05-22 21:12:26  [ main:5016 ] - [ DEBUG ]  11111 == 1
-2016-05-22 21:12:26  [ pool-2-thread-1:5017 ] - [ ERROR ]  MiniRunnable
+2016-06-02 13:26:10  [ main:1 ] - [ DEBUG ]  init
+2016-06-02 13:26:10  [ pool-1-thread-1:14 ] - [ DEBUG ]  loop
+2016-06-02 13:26:10  [ pool-1-thread-1:17 ] - [ DEBUG ]  count == 1
+2016-06-02 13:26:10  [ pool-2-thread-1:18 ] - [ DEBUG ]  mytask
+2016-06-02 13:26:15  [ main:5016 ] - [ DEBUG ]  11111 == 1
+2016-06-02 13:26:15  [ pool-2-thread-1:5017 ] - [ ERROR ]  MiniRunnable
 java.lang.InterruptedException: sleep interrupted
 	at java.lang.Thread.sleep(Native Method)
 	at com.james.tm.task.MiniRunnable.run(MiniRunnable.java:32)
@@ -14,33 +14,10 @@ java.lang.InterruptedException: sleep interrupted
 	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
 	at java.lang.Thread.run(Thread.java:744)
-2016-05-22 21:12:26  [ pool-2-thread-1:5020 ] - [ DEBUG ]  back
+2016-06-02 13:26:15  [ pool-2-thread-1:5028 ] - [ DEBUG ]  back
 e.getLocalizedMessage()
-2016-05-22 21:12:26  [ pool-1-thread-1:5021 ] - [ DEBUG ]  loop
-2016-05-22 21:12:26  [ pool-1-thread-1:5021 ] - [ DEBUG ]  count == 2
-2016-05-22 21:12:26  [ pool-2-thread-1:5021 ] - [ DEBUG ]  mytask
-2016-05-22 21:12:36  [ pool-2-thread-1:15044 ] - [ DEBUG ]  back
-hello world!!!
-2016-05-22 21:14:14  [ main:0 ] - [ DEBUG ]  init
-2016-05-22 21:14:14  [ pool-1-thread-1:7 ] - [ DEBUG ]  loop
-2016-05-22 21:14:14  [ pool-1-thread-1:9 ] - [ DEBUG ]  count == 1
-2016-05-22 21:14:14  [ pool-2-thread-1:10 ] - [ DEBUG ]  mytask
-2016-05-22 21:14:19  [ main:5009 ] - [ DEBUG ]  11111 == 1
-2016-05-22 21:14:19  [ pool-2-thread-1:5010 ] - [ ERROR ]  MiniRunnable
-java.lang.InterruptedException: sleep interrupted
-	at java.lang.Thread.sleep(Native Method)
-	at com.james.tm.task.MiniRunnable.run(MiniRunnable.java:32)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:744)
-2016-05-22 21:14:19  [ pool-2-thread-1:5013 ] - [ DEBUG ]  back
-e.getLocalizedMessage()
-2016-05-22 21:14:19  [ pool-1-thread-1:5013 ] - [ DEBUG ]  loop
-2016-05-22 21:14:19  [ pool-1-thread-1:5014 ] - [ DEBUG ]  count == 2
-2016-05-22 21:14:19  [ pool-2-thread-1:5014 ] - [ DEBUG ]  mytask
-2016-05-22 21:14:29  [ pool-2-thread-1:15043 ] - [ DEBUG ]  back
+2016-06-02 13:26:15  [ pool-1-thread-1:5029 ] - [ DEBUG ]  loop
+2016-06-02 13:26:15  [ pool-1-thread-1:5029 ] - [ DEBUG ]  count == 2
+2016-06-02 13:26:15  [ pool-2-thread-1:5030 ] - [ DEBUG ]  mytask
+2016-06-02 13:26:25  [ pool-2-thread-1:15046 ] - [ DEBUG ]  back
 hello world!!!
