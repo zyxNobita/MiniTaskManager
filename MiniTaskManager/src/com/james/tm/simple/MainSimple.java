@@ -45,9 +45,8 @@ public class MainSimple {
 				// TODO Auto-generated method stub
 				Log.d(TAG, "back\n" + t);
 			}
-		}).
-		build();
-
+		}).build();
+		
 		TaskManager.addTask(mytask);
 		Thread.sleep(5000);
 		TaskManager.cancelTask(mytask);
