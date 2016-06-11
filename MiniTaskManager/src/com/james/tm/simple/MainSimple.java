@@ -33,26 +33,12 @@ public class MainSimple {
 
 	private static final String TAG = MainSimple.class.getSimpleName();
 
-	public static MtmManager mtmManager;
 
 	public static void main(String[] args) throws InterruptedException {
-
-		mtmManager = new MtmManager.Builder().build();
-		mtmManager.initialize();
-
-		Task mytask = new Task.Builder().handler(new IHandler() {
-
-			@Override
-			public <T> void back(T t) {
-				// TODO Auto-generated method stub
-				Log.d(TAG, "back\n" + t);
-			}
-		}).build();
-
-		mtmManager.shutDownNow();
-		TaskManager.addTask(mytask);
-		//Thread.sleep(5000);
-		//TaskManager.cancelTask(mytask);
+			
+		new TestSimple().test();
+		
+		
 	}
 
 }

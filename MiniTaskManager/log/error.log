@@ -1,7 +1,29 @@
-2016-06-06 13:26:31  [ pool-2-thread-1:5023 ] - [ ERROR ]  MiniRunnable
+2016-06-11 16:31:45  [ pool-2-thread-1:5008 ] - [ ERROR ]  MiniRunnable
 java.lang.InterruptedException: sleep interrupted
 	at java.lang.Thread.sleep(Native Method)
-	at com.james.tm.task.MiniRunnable.run(MiniRunnable.java:32)
+	at com.james.tm.executor.MiniRunnable.run(MiniRunnable.java:33)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+2016-06-11 16:34:36  [ pool-2-thread-1:5010 ] - [ ERROR ]  MiniRunnable
+java.lang.InterruptedException: sleep interrupted
+	at java.lang.Thread.sleep(Native Method)
+	at com.james.tm.executor.MiniRunnable.run(MiniRunnable.java:33)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+2016-06-11 16:36:44  [ pool-2-thread-1:5010 ] - [ ERROR ]  MiniRunnable
+java.lang.InterruptedException: sleep interrupted
+	at java.lang.Thread.sleep(Native Method)
+	at com.james.tm.executor.MiniRunnable.run(MiniRunnable.java:33)
 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
 	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
 	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)

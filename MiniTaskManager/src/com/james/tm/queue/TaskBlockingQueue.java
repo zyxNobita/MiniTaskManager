@@ -1,7 +1,10 @@
 package com.james.tm.queue;
 
+import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
 import java.util.concurrent.BlockingQueue;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.FutureTask;
@@ -37,6 +40,8 @@ public class TaskBlockingQueue implements IBaseBlockingQueue {
 
 	public ExecutorService cacheExecutors;
 
+	public boolean isloop = true;
+
 	private TaskBlockingQueue() {
 
 	}
@@ -49,7 +54,6 @@ public class TaskBlockingQueue implements IBaseBlockingQueue {
 		return taskBlockingQueue;
 	}
 
-	
 	public TaskBlockingQueue initExecutors(ExecutorService singleExecutors,
 			ExecutorService cacheExecutors) {
 		this.singleExecutors = singleExecutors;
@@ -72,7 +76,7 @@ public class TaskBlockingQueue implements IBaseBlockingQueue {
 			@Override
 			public void run() {
 				// TODO Auto-generated method stub
-				while (true) {
+				while (isloop) {
 					try {
 						if (taskQueue != null && taskQueue.size() != 0) {
 							Log.d(TAG, "loop");
@@ -147,6 +151,49 @@ public class TaskBlockingQueue implements IBaseBlockingQueue {
 	public Task get(Task mytask) {
 		// TODO Auto-generated method stub
 		return null;
+	}
+
+	@Override
+	public void shutdownNow() {
+		// TODO Auto-generated method stub
+		shutdown();
+		if (!futures.isEmpty()) {
+			Set<Entry<Integer, FutureTask<?>>> sets = futures.entrySet();
+			Iterator<Entry<Integer, FutureTask<?>>> iterator = sets.iterator();
+			while (iterator.hasNext()) {
+				Entry<Integer, FutureTask<?>> entry = iterator.next();
+				Integer key = entry.getKey();
+				FutureTask<?> futureTask = entry.getValue();
+				Log.d(TAG, "task hashCode :" + key);
+				if (futureTask == null)
+					throw new NullPointerException("futureTask is null");
+				if (futureTask.isDone()) {
+					Log.d(TAG,
+							"task hashCode :" + key + ":state"
+									+ futureTask.isDone());
+				} else {
+					if (!futureTask.isCancelled()) {
+						boolean iscancel = futureTask.cancel(true);
+						if (iscancel) {
+							Log.d(TAG, "task cancel success");
+						} else {
+							Log.d(TAG, "task cancel fail");
+						}
+					}
+				}
+			}
+		}
+	}
+
+	@Override
+	public void shutdown() {
+		// TODO Auto-generated method stub
+		if (isloop)
+			isloop = false;
+		Log.d(TAG, " task Queue Unfinished Business count :"+taskQueue.size());
+		if (taskQueue != null)
+			taskQueue.clear();
+
 	}
 
 }

@@ -70,11 +70,14 @@ public class MtmManager extends AbstractMtmManager {
 	 */
 	public void shutdown() {
 		if (singleExecutors == null)
-			throw new NullPointerException("shutdown singleExecutors is null or mtmManager not init");
+			throw new NullPointerException(
+					"shutdown singleExecutors is null or mtmManager not init");
 		if (cacheExecutors == null)
 			throw new NullPointerException("shutdown cacheExecutors is null");
+		taskBlockingQueue.shutdown();
 		singleExecutors.shutdown();
 		cacheExecutors.shutdown();
+	
 	}
 
 	/**
@@ -86,8 +89,10 @@ public class MtmManager extends AbstractMtmManager {
 					"shutdownNow singleExecutors is null");
 		if (cacheExecutors == null)
 			throw new NullPointerException("shutdownNow cacheExecutors is null");
+		taskBlockingQueue.shutdownNow();
 		singleExecutors.shutdownNow();
 		cacheExecutors.shutdownNow();
+		
 	}
 
 	public static class Builder {

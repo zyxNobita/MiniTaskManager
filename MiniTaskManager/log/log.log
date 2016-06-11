@@ -110,3 +110,131 @@ hello world
 2016-06-11 13:54:18  [ pool-1-thread-1:5 ] - [ DEBUG ]  loop
 2016-06-11 13:54:18  [ pool-1-thread-1:25 ] - [ DEBUG ]  loop
 2016-06-11 13:54:18  [ pool-1-thread-1:26 ] - [ DEBUG ]  count == 1
+2016-06-11 14:11:45  [ main:0 ] - [ DEBUG ]  init
+2016-06-11 14:11:45  [ pool-1-thread-1:4 ] - [ DEBUG ]  loop
+2016-06-11 14:11:45  [ pool-1-thread-1:6 ] - [ DEBUG ]  loop
+2016-06-11 14:11:45  [ pool-1-thread-1:8 ] - [ DEBUG ]  count == 1
+2016-06-11 14:11:51  [ main:0 ] - [ DEBUG ]  init
+2016-06-11 14:11:51  [ pool-1-thread-1:5 ] - [ DEBUG ]  loop
+2016-06-11 14:11:51  [ pool-1-thread-1:7 ] - [ DEBUG ]  count == 1
+2016-06-11 14:11:51  [ pool-2-thread-1:8 ] - [ DEBUG ]  mytask
+2016-06-11 14:11:51  [ pool-2-thread-1:8 ] - [ DEBUG ]  back
+hello world!!!
+2016-06-11 14:11:51  [ pool-2-thread-1:8 ] - [ DEBUG ]  1
+2016-06-11 14:11:52  [ pool-2-thread-1:1014 ] - [ DEBUG ]  2
+2016-06-11 14:11:53  [ pool-2-thread-1:2014 ] - [ DEBUG ]  3
+2016-06-11 14:11:54  [ pool-2-thread-1:3015 ] - [ DEBUG ]  4
+2016-06-11 14:11:55  [ pool-2-thread-1:4016 ] - [ DEBUG ]  5
+2016-06-11 14:11:56  [ pool-2-thread-1:5020 ] - [ DEBUG ]  6
+2016-06-11 14:11:57  [ pool-2-thread-1:6025 ] - [ DEBUG ]  7
+2016-06-11 14:11:58  [ pool-2-thread-1:7031 ] - [ DEBUG ]  8
+2016-06-11 16:28:04  [ main:0 ] - [ DEBUG ]  init
+2016-06-11 16:28:04  [ main:5 ] - [ DEBUG ]  多少任务未完成 待写
+2016-06-11 16:30:19  [ main:0 ] - [ DEBUG ]  init
+2016-06-11 16:30:19  [ main:4 ] - [ DEBUG ]  多少任务未完成 待写
+2016-06-11 16:30:30  [ main:0 ] - [ DEBUG ]  init
+2016-06-11 16:30:30  [ pool-1-thread-1:4 ] - [ DEBUG ]  loop
+2016-06-11 16:30:30  [ main:4 ] - [ DEBUG ]  多少任务未完成 待写
+2016-06-11 16:30:30  [ pool-1-thread-1:5 ] - [ DEBUG ]  count == 1
+2016-06-11 16:30:59  [ main:0 ] - [ DEBUG ]  init
+2016-06-11 16:30:59  [ pool-1-thread-1:5 ] - [ DEBUG ]  loop
+2016-06-11 16:30:59  [ main:5 ] - [ DEBUG ]  多少任务未完成 待写
+2016-06-11 16:30:59  [ pool-1-thread-1:6 ] - [ DEBUG ]  count == 1
+2016-06-11 16:31:16  [ main:0 ] - [ DEBUG ]  init
+2016-06-11 16:31:16  [ pool-1-thread-1:10 ] - [ DEBUG ]  loop
+2016-06-11 16:31:16  [ pool-1-thread-1:12 ] - [ DEBUG ]  count == 1
+2016-06-11 16:31:16  [ pool-2-thread-1:14 ] - [ DEBUG ]  mytask
+2016-06-11 16:31:16  [ pool-2-thread-1:14 ] - [ DEBUG ]  back
+hello world!!!
+2016-06-11 16:31:16  [ pool-2-thread-1:14 ] - [ DEBUG ]  1
+2016-06-11 16:31:17  [ pool-2-thread-1:1019 ] - [ DEBUG ]  2
+2016-06-11 16:31:18  [ pool-2-thread-1:2024 ] - [ DEBUG ]  3
+2016-06-11 16:31:19  [ pool-2-thread-1:3030 ] - [ DEBUG ]  4
+2016-06-11 16:31:20  [ pool-2-thread-1:4035 ] - [ DEBUG ]  5
+2016-06-11 16:31:21  [ main:5015 ] - [ DEBUG ]  多少任务未完成 待写
+2016-06-11 16:31:21  [ pool-2-thread-1:5041 ] - [ DEBUG ]  6
+2016-06-11 16:31:22  [ pool-2-thread-1:6046 ] - [ DEBUG ]  7
+2016-06-11 16:31:24  [ pool-2-thread-1:7052 ] - [ DEBUG ]  8
+2016-06-11 16:31:25  [ pool-2-thread-1:8058 ] - [ DEBUG ]  9
+2016-06-11 16:31:26  [ pool-2-thread-1:9063 ] - [ DEBUG ]  10
+2016-06-11 16:31:40  [ main:1 ] - [ DEBUG ]  init
+2016-06-11 16:31:40  [ pool-1-thread-1:6 ] - [ DEBUG ]  loop
+2016-06-11 16:31:40  [ pool-1-thread-1:7 ] - [ DEBUG ]  count == 1
+2016-06-11 16:31:40  [ pool-2-thread-1:8 ] - [ DEBUG ]  mytask
+2016-06-11 16:31:40  [ pool-2-thread-1:8 ] - [ DEBUG ]  back
+hello world!!!
+2016-06-11 16:31:40  [ pool-2-thread-1:8 ] - [ DEBUG ]  1
+2016-06-11 16:31:41  [ pool-2-thread-1:1013 ] - [ DEBUG ]  2
+2016-06-11 16:31:42  [ pool-2-thread-1:2019 ] - [ DEBUG ]  3
+2016-06-11 16:31:43  [ pool-2-thread-1:3024 ] - [ DEBUG ]  4
+2016-06-11 16:31:44  [ pool-2-thread-1:4024 ] - [ DEBUG ]  5
+2016-06-11 16:31:45  [ main:5007 ] - [ DEBUG ]  多少任务未完成 待写
+2016-06-11 16:31:45  [ main:5007 ] - [ DEBUG ]  task hashCode :1251625891
+2016-06-11 16:31:45  [ main:5007 ] - [ DEBUG ]  task cancel success
+2016-06-11 16:31:45  [ pool-2-thread-1:5008 ] - [ ERROR ]  MiniRunnable
+java.lang.InterruptedException: sleep interrupted
+	at java.lang.Thread.sleep(Native Method)
+	at com.james.tm.executor.MiniRunnable.run(MiniRunnable.java:33)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+2016-06-11 16:31:45  [ pool-2-thread-1:5022 ] - [ DEBUG ]  back
+e.getLocalizedMessage()
+2016-06-11 16:34:31  [ main:0 ] - [ DEBUG ]  init
+2016-06-11 16:34:31  [ pool-1-thread-1:4 ] - [ DEBUG ]  loop
+2016-06-11 16:34:31  [ pool-1-thread-1:6 ] - [ DEBUG ]  count == 1
+2016-06-11 16:34:31  [ pool-2-thread-1:7 ] - [ DEBUG ]  mytask
+2016-06-11 16:34:31  [ pool-2-thread-1:7 ] - [ DEBUG ]  back
+hello world!!!
+2016-06-11 16:34:31  [ pool-2-thread-1:7 ] - [ DEBUG ]  1
+2016-06-11 16:34:32  [ pool-2-thread-1:1012 ] - [ DEBUG ]  2
+2016-06-11 16:34:33  [ pool-2-thread-1:2014 ] - [ DEBUG ]  3
+2016-06-11 16:34:34  [ pool-2-thread-1:3015 ] - [ DEBUG ]  4
+2016-06-11 16:34:35  [ pool-2-thread-1:4020 ] - [ DEBUG ]  5
+2016-06-11 16:34:36  [ main:5008 ] - [ DEBUG ]  多少任务未完成 待写
+2016-06-11 16:34:36  [ main:5009 ] - [ DEBUG ]  task hashCode :475914234
+2016-06-11 16:34:36  [ main:5009 ] - [ DEBUG ]  task cancel success
+2016-06-11 16:34:36  [ pool-2-thread-1:5010 ] - [ ERROR ]  MiniRunnable
+java.lang.InterruptedException: sleep interrupted
+	at java.lang.Thread.sleep(Native Method)
+	at com.james.tm.executor.MiniRunnable.run(MiniRunnable.java:33)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+2016-06-11 16:34:36  [ pool-2-thread-1:5013 ] - [ DEBUG ]  back
+e.getLocalizedMessage()
+2016-06-11 16:36:39  [ main:0 ] - [ DEBUG ]  init
+2016-06-11 16:36:39  [ pool-1-thread-1:4 ] - [ DEBUG ]  loop
+2016-06-11 16:36:39  [ pool-1-thread-1:6 ] - [ DEBUG ]  count == 1
+2016-06-11 16:36:39  [ pool-2-thread-1:6 ] - [ DEBUG ]  mytask
+2016-06-11 16:36:39  [ pool-2-thread-1:7 ] - [ DEBUG ]  back
+hello world!!!
+2016-06-11 16:36:39  [ pool-2-thread-1:7 ] - [ DEBUG ]  1
+2016-06-11 16:36:40  [ pool-2-thread-1:1007 ] - [ DEBUG ]  2
+2016-06-11 16:36:41  [ pool-2-thread-1:2008 ] - [ DEBUG ]  3
+2016-06-11 16:36:42  [ pool-2-thread-1:3009 ] - [ DEBUG ]  4
+2016-06-11 16:36:43  [ pool-2-thread-1:4010 ] - [ DEBUG ]  5
+2016-06-11 16:36:44  [ main:5008 ] - [ DEBUG ]   task Queue Unfinished Business count :0
+2016-06-11 16:36:44  [ main:5009 ] - [ DEBUG ]  task hashCode :55737418
+2016-06-11 16:36:44  [ main:5009 ] - [ DEBUG ]  task cancel success
+2016-06-11 16:36:44  [ pool-2-thread-1:5010 ] - [ ERROR ]  MiniRunnable
+java.lang.InterruptedException: sleep interrupted
+	at java.lang.Thread.sleep(Native Method)
+	at com.james.tm.executor.MiniRunnable.run(MiniRunnable.java:33)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+2016-06-11 16:36:44  [ pool-2-thread-1:5013 ] - [ DEBUG ]  back
+e.getLocalizedMessage()

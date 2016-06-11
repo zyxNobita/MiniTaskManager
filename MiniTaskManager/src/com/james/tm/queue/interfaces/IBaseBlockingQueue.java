@@ -2,7 +2,6 @@ package com.james.tm.queue.interfaces;
 
 import java.util.concurrent.ExecutorService;
 
-import com.james.tm.queue.TaskBlockingQueue;
 import com.james.tm.task.Task;
 
 public interface IBaseBlockingQueue {
@@ -11,6 +10,7 @@ public interface IBaseBlockingQueue {
 
 	/**
 	 * 初始化线程池
+	 * 
 	 * @param singleExecutors
 	 * @param cacheExecutors
 	 * @return
@@ -48,5 +48,15 @@ public interface IBaseBlockingQueue {
 	 * 循环获取队列任务
 	 */
 	void loop();
+
+	/**
+	 * 强制关闭队列和任务
+	 */
+	void shutdownNow();
+
+	/**
+	 * 关闭队列和任务
+	 */
+	void shutdown();
 
 }

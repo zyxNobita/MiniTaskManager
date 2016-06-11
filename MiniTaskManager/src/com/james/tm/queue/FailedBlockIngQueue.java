@@ -76,4 +76,16 @@ public class FailedBlockIngQueue implements IBaseBlockingQueue {
 		return null;
 	}
 
+	@Override
+	public void shutdownNow() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void shutdown() {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

@@ -22,7 +22,7 @@ public class Task implements ITask {
 	public void run() {
 		// TODO Auto-generated method stub
 		Log.d(TAG, "mytask");
-		handler.back("hello world");
+		handler.back(new String("hello world!!!"));
 	}
 
 	public static class Builder {
