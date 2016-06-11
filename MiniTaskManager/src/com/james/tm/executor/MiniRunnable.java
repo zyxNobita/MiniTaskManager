@@ -31,7 +31,6 @@ public class MiniRunnable implements Runnable {
 				count++;
 				Log.d(TAG, count+"");
 				Thread.sleep(1000);
-
 			}
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
@@ -39,7 +38,8 @@ public class MiniRunnable implements Runnable {
 			this.handler.back("e.getLocalizedMessage()");
 			FailedBlockIngQueue.getInstance().add(task);
 		}
-
+		
+		
 	}
 
 	public static class Builder {

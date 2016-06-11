@@ -139,11 +139,12 @@ public class TaskBlockingQueue implements IBaseBlockingQueue {
 		FutureTask<?> futuretask = futures.get(mytask.hashCode());
 		if (futuretask == null)
 			throw new NullPointerException("task not found");
+		if (futuretask.isDone())
+			return SUCCESS;
 		if (!futuretask.isCancelled()) {
 			futuretask.cancel(true);
 			return SUCCESS;
 		}
-
 		return FAIL;
 	}
 
@@ -190,7 +191,7 @@ public class TaskBlockingQueue implements IBaseBlockingQueue {
 		// TODO Auto-generated method stub
 		if (isloop)
 			isloop = false;
-		Log.d(TAG, " task Queue Unfinished Business count :"+taskQueue.size());
+		Log.d(TAG, " task Queue Unfinished Business count :" + taskQueue.size());
 		if (taskQueue != null)
 			taskQueue.clear();
 

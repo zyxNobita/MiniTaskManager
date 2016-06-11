@@ -77,7 +77,7 @@ public class MtmManager extends AbstractMtmManager {
 		taskBlockingQueue.shutdown();
 		singleExecutors.shutdown();
 		cacheExecutors.shutdown();
-	
+
 	}
 
 	/**
@@ -92,7 +92,7 @@ public class MtmManager extends AbstractMtmManager {
 		taskBlockingQueue.shutdownNow();
 		singleExecutors.shutdownNow();
 		cacheExecutors.shutdownNow();
-		
+
 	}
 
 	public static class Builder {

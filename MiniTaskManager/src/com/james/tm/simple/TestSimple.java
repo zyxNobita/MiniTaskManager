@@ -7,26 +7,43 @@ import com.james.tm.taskmanage.MtmManager;
 import com.james.tm.taskmanage.TaskManager;
 
 public class TestSimple {
-	public static MtmManager mtmManager;
+
 
 	private static final String TAG = TestSimple.class.getSimpleName();
 	
 	void test() throws InterruptedException {
 
-		mtmManager = new MtmManager.Builder().build();
-		mtmManager.initialize();
+		for (int i = 0; i < 500; i++) {
+			Task mytask = new Task.Builder().handler(new IHandler() {
 
-		Task mytask = new Task.Builder().handler(new IHandler() {
+				@Override
+				public <T> void back(T t) {
+					// TODO Auto-generated method stub
+					Log.d(TAG, "back\n" + t.toString());
+				}
+			}).build();
+			TaskManager.addTask(mytask);
+			
+		}
+		
+//		Thread.sleep(1000*60*2);
+		//TaskManager.cancelTask(mytask);
+//		test2();
+		
+	}
+	
+	void test2(){
+		for (int i = 0; i < 500; i++) {
+			Task mytask = new Task.Builder().handler(new IHandler() {
 
-			@Override
-			public <T> void back(T t) {
-				// TODO Auto-generated method stub
-				Log.d(TAG, "back\n" + t.toString());
-			}
-		}).build();
-
-		TaskManager.addTask(mytask);
-		Thread.sleep(5000);
-		mtmManager.shutDownNow();
+				@Override
+				public <T> void back(T t) {
+					// TODO Auto-generated method stub
+					Log.d(TAG, "back\n" + t.toString());
+				}
+			}).build();
+			TaskManager.addTask(mytask);
+			//TaskManager.cancelTask(mytask);
+		}
 	}
 }
