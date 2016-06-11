@@ -1,8 +1,22 @@
 package com.james.tm.queue.interfaces;
 
+import java.util.concurrent.ExecutorService;
+
+import com.james.tm.queue.TaskBlockingQueue;
 import com.james.tm.task.Task;
 
 public interface IBaseBlockingQueue {
+
+	static final String TAG = IBaseBlockingQueue.class.getSimpleName();
+
+	/**
+	 * 初始化线程池
+	 * @param singleExecutors
+	 * @param cacheExecutors
+	 * @return
+	 */
+	IBaseBlockingQueue initExecutors(ExecutorService singleExecutors,
+			ExecutorService cacheExecutors);
 
 	/**
 	 * 初始化 队列

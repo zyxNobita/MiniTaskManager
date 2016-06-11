@@ -1,6 +1,8 @@
 package com.james.tm.queue;
 
 
+import java.util.concurrent.ExecutorService;
+
 import com.james.tm.queue.interfaces.IBaseBlockingQueue;
 import com.james.tm.task.Task;
 
@@ -16,6 +18,10 @@ public class FailedBlockIngQueue implements IBaseBlockingQueue {
 
 //	private static BlockingQueue<Task> failTasks = new LinkedBlockingQueue<>();
 
+	public ExecutorService singleExecutors;
+
+	public ExecutorService cacheExecutors;
+	
 	private FailedBlockIngQueue() {
 
 	}
@@ -28,6 +34,15 @@ public class FailedBlockIngQueue implements IBaseBlockingQueue {
 			return failedBlockIngQueue;
 		}
 	}
+	
+
+	public FailedBlockIngQueue initExecutors(ExecutorService singleExecutors,
+			ExecutorService cacheExecutors) {
+		this.singleExecutors = singleExecutors;
+		this.cacheExecutors = cacheExecutors;
+		return this;
+	}
+
 
 	@Override
 	public void init() {

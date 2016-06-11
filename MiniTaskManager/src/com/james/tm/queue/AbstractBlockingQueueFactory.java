@@ -3,12 +3,12 @@ package com.james.tm.queue;
 public abstract class AbstractBlockingQueueFactory {
 
 	/** 任务队列 */
-	public abstract void taskBlockingQueueInit();
+	abstract void taskBlockingQueueInit();
 
 	/** 失败队列 */
-	public abstract void failedBlcokingQueueInit();
+	abstract void failedBlcokingQueueInit();
 
 	/** 消息队列 */
-	public abstract void messageBlckingQueueInit();
+	abstract void messageBlckingQueueInit();
 
 }

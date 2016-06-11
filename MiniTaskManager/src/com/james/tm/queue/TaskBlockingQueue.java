@@ -12,7 +12,9 @@ import com.james.tm.log.Log;
 import com.james.tm.queue.interfaces.IBaseBlockingQueue;
 import com.james.tm.task.MiniRunnable;
 import com.james.tm.task.Task;
-import com.james.tm.taskmanage.MiniExecutorService;
+
+import static com.james.tm.configuration.MiniTaskManagerConfiguration.SUCCESS;
+import static com.james.tm.configuration.MiniTaskManagerConfiguration.FAIL;
 
 /**
  * 任务队列
@@ -29,18 +31,11 @@ public class TaskBlockingQueue implements IBaseBlockingQueue {
 
 	private static TaskBlockingQueue taskBlockingQueue;
 
-	private static final int SUCCESS = 1;
-
-	private static final int FAIL = 0;
-
 	private static int count = 0;
 
-	private ExecutorService singleExecutors;
+	public ExecutorService singleExecutors;
 
-	private ExecutorService cacheExeccutors;
-
-	protected static final String TAG = IBaseBlockingQueue.class
-			.getSimpleName();
+	public ExecutorService cacheExecutors;
 
 	private TaskBlockingQueue() {
 
@@ -54,12 +49,18 @@ public class TaskBlockingQueue implements IBaseBlockingQueue {
 		return taskBlockingQueue;
 	}
 
+	
+	public TaskBlockingQueue initExecutors(ExecutorService singleExecutors,
+			ExecutorService cacheExecutors) {
+		this.singleExecutors = singleExecutors;
+		this.cacheExecutors = cacheExecutors;
+		return this;
+	}
+
 	@Override
 	public void init() {
 		// TODO Auto-generated method stub
 		Log.d(TAG, "init");
-		singleExecutors = MiniExecutorService.getSingleThreadExecutor();
-		cacheExeccutors = MiniExecutorService.getCachedThreadPool();
 		loop();
 	}
 
@@ -77,7 +78,7 @@ public class TaskBlockingQueue implements IBaseBlockingQueue {
 							Log.d(TAG, "loop");
 							Task myTask = taskQueue.take();
 							if (myTask != null) {
-								pushExecutor(myTask);
+								pushTaskToExecutor(myTask);
 							}
 						}
 					} catch (InterruptedException e) {// 线程中断 任务中断
@@ -91,7 +92,12 @@ public class TaskBlockingQueue implements IBaseBlockingQueue {
 
 	}
 
-	public void pushExecutor(final Task mytask) {
+	/**
+	 * 推进任务到线程池中
+	 * 
+	 * @param mytask
+	 */
+	public void pushTaskToExecutor(final Task mytask) {
 		MiniRunnable runnable = new MiniRunnable.Builder().setTask(mytask)
 				.setHandler(new IHandler() {
 
@@ -107,7 +113,7 @@ public class TaskBlockingQueue implements IBaseBlockingQueue {
 		Log.d(TAG, "count == " + count);
 		FutureTask<?> task = new FutureTask<>(runnable, null);
 		futures.put(mytask.hashCode(), task);
-		cacheExeccutors.submit(task);
+		cacheExecutors.submit(task);
 
 	}
 
@@ -124,15 +130,16 @@ public class TaskBlockingQueue implements IBaseBlockingQueue {
 	@Override
 	public int cancel(Task mytask) {
 		// TODO Auto-generated method stub
-		Log.d(TAG, "11111 == " + count);
+		if (mytask == null)
+			throw new NullPointerException("mytask is null");
 		FutureTask<?> futuretask = futures.get(mytask.hashCode());
-		if (futuretask != null) {
-			if(!futuretask.isCancelled()){
-				futuretask.cancel(true);
-				return SUCCESS;
-			}
-			
+		if (futuretask == null)
+			throw new NullPointerException("task not found");
+		if (!futuretask.isCancelled()) {
+			futuretask.cancel(true);
+			return SUCCESS;
 		}
+
 		return FAIL;
 	}
 

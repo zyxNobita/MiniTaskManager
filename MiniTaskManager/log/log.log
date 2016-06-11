@@ -1,23 +1,18 @@
-2016-06-06 13:26:26  [ main:0 ] - [ DEBUG ]  init
-2016-06-06 13:26:26  [ pool-1-thread-1:18 ] - [ DEBUG ]  loop
-2016-06-06 13:26:26  [ pool-1-thread-1:20 ] - [ DEBUG ]  count == 1
-2016-06-06 13:26:26  [ pool-2-thread-1:22 ] - [ DEBUG ]  mytask
-2016-06-06 13:26:31  [ main:5022 ] - [ DEBUG ]  11111 == 1
-2016-06-06 13:26:31  [ pool-2-thread-1:5023 ] - [ ERROR ]  MiniRunnable
-java.lang.InterruptedException: sleep interrupted
-	at java.lang.Thread.sleep(Native Method)
-	at com.james.tm.task.MiniRunnable.run(MiniRunnable.java:32)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
-	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
-	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
-	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
-	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
-	at java.lang.Thread.run(Thread.java:744)
-2016-06-06 13:26:31  [ pool-2-thread-1:5036 ] - [ DEBUG ]  back
-e.getLocalizedMessage()
-2016-06-06 13:26:31  [ pool-1-thread-1:5036 ] - [ DEBUG ]  loop
-2016-06-06 13:26:31  [ pool-1-thread-1:5036 ] - [ DEBUG ]  count == 2
-2016-06-06 13:26:31  [ pool-2-thread-1:5037 ] - [ DEBUG ]  mytask
-2016-06-06 13:26:41  [ pool-2-thread-1:15053 ] - [ DEBUG ]  back
+2016-06-07 13:30:55  [ main:0 ] - [ DEBUG ]  init
+2016-06-07 13:30:55  [ pool-1-thread-1:12 ] - [ DEBUG ]  loop
+2016-06-07 13:30:55  [ pool-1-thread-1:13 ] - [ DEBUG ]  count == 1
+2016-06-07 13:30:55  [ pool-2-thread-1:14 ] - [ DEBUG ]  mytask
+2016-06-07 13:31:05  [ pool-2-thread-1:10039 ] - [ DEBUG ]  back
+hello world!!!
+2016-06-07 13:32:35  [ main:0 ] - [ DEBUG ]  init
+2016-06-07 13:32:35  [ pool-1-thread-1:6 ] - [ DEBUG ]  loop
+2016-06-07 13:32:35  [ pool-1-thread-1:8 ] - [ DEBUG ]  count == 1
+2016-06-07 13:32:35  [ pool-2-thread-1:11 ] - [ DEBUG ]  mytask
+2016-06-07 13:32:45  [ pool-2-thread-1:10036 ] - [ DEBUG ]  back
+hello world!!!
+2016-06-07 13:35:19  [ main:0 ] - [ DEBUG ]  init
+2016-06-07 13:35:19  [ pool-1-thread-1:6 ] - [ DEBUG ]  loop
+2016-06-07 13:35:19  [ pool-1-thread-1:7 ] - [ DEBUG ]  count == 1
+2016-06-07 13:35:19  [ pool-2-thread-1:8 ] - [ DEBUG ]  mytask
+2016-06-07 13:35:29  [ pool-2-thread-1:10029 ] - [ DEBUG ]  back
 hello world!!!
