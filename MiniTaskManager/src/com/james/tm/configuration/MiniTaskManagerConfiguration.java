@@ -11,5 +11,6 @@ public abstract class MiniTaskManagerConfiguration {
 	 * 任务执行失败
 	 */
 	public static final int FAIL = 0;
+	
 
 }

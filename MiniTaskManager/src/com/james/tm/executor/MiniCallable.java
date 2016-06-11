@@ -1,6 +1,8 @@
-package com.james.tm.task;
+package com.james.tm.executor;
 
 import java.util.concurrent.Callable;
+
+import com.james.tm.task.Task;
 
 public class MiniCallable<V> implements Callable<V> {
 

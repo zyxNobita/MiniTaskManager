@@ -1,8 +1,9 @@
-package com.james.tm.task;
+package com.james.tm.executor;
 
 import com.james.tm.handler.interfaces.IHandler;
 import com.james.tm.log.Log;
 import com.james.tm.queue.FailedBlockIngQueue;
+import com.james.tm.task.Task;
 
 public class MiniRunnable implements Runnable {
 
@@ -28,11 +29,10 @@ public class MiniRunnable implements Runnable {
 		try {
 			while (count != 10) {
 				count++;
-
+				Log.d(TAG, count+"");
 				Thread.sleep(1000);
 
 			}
-			this.handler.back("hello world!!!");
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
 			Log.e(TAG, e);

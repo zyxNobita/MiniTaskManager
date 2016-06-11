@@ -3,6 +3,7 @@ package com.james.tm.taskmanage;
 import java.util.concurrent.ExecutorService;
 
 import com.james.tm.queue.BlockingQueueFactory;
+import com.james.tm.queue.TaskBlockingQueue;
 
 /**
  * 用于初始化 管理［程序启动时运行］
@@ -18,6 +19,8 @@ public class MtmManager extends AbstractMtmManager {
 
 	private BlockingQueueFactory blockingQueueFactory;
 
+	public static TaskBlockingQueue taskBlockingQueue;
+
 	public MtmManager() {
 
 	}
@@ -31,6 +34,8 @@ public class MtmManager extends AbstractMtmManager {
 		execcutorsInitialize();
 		// 任务、消息、任务失败队列 初始化
 		blockQueueInitialize();
+		// 初始化任务管理器
+		initTaskManager();
 
 	}
 
@@ -53,10 +58,21 @@ public class MtmManager extends AbstractMtmManager {
 	}
 
 	/**
+	 * 初始化任务管理器
+	 */
+	public void initTaskManager() {
+		taskBlockingQueue = TaskBlockingQueue.getInstance();
+	}
+
+	/**
 	 * 让正在进行的任务完成之后，在进行关闭整个任务管理器
 	 * 
 	 */
 	public void shutdown() {
+		if (singleExecutors == null)
+			throw new NullPointerException("shutdown singleExecutors is null or mtmManager not init");
+		if (cacheExecutors == null)
+			throw new NullPointerException("shutdown cacheExecutors is null");
 		singleExecutors.shutdown();
 		cacheExecutors.shutdown();
 	}
@@ -65,6 +81,11 @@ public class MtmManager extends AbstractMtmManager {
 	 * 如果有进行的任务，也强制关闭
 	 */
 	public void shutDownNow() {
+		if (singleExecutors == null)
+			throw new NullPointerException(
+					"shutdownNow singleExecutors is null");
+		if (cacheExecutors == null)
+			throw new NullPointerException("shutdownNow cacheExecutors is null");
 		singleExecutors.shutdownNow();
 		cacheExecutors.shutdownNow();
 	}

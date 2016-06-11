@@ -7,10 +7,10 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.FutureTask;
 import java.util.concurrent.LinkedBlockingQueue;
 
+import com.james.tm.executor.MiniRunnable;
 import com.james.tm.handler.interfaces.IHandler;
 import com.james.tm.log.Log;
 import com.james.tm.queue.interfaces.IBaseBlockingQueue;
-import com.james.tm.task.MiniRunnable;
 import com.james.tm.task.Task;
 
 import static com.james.tm.configuration.MiniTaskManagerConfiguration.SUCCESS;

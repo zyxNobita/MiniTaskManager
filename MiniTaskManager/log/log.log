@@ -16,3 +16,97 @@ hello world!!!
 2016-06-07 13:35:19  [ pool-2-thread-1:8 ] - [ DEBUG ]  mytask
 2016-06-07 13:35:29  [ pool-2-thread-1:10029 ] - [ DEBUG ]  back
 hello world!!!
+2016-06-11 12:17:04  [ main:0 ] - [ DEBUG ]  init
+2016-06-11 12:17:04  [ pool-1-thread-1:5 ] - [ DEBUG ]  loop
+2016-06-11 12:17:04  [ pool-1-thread-1:7 ] - [ DEBUG ]  loop
+2016-06-11 12:17:04  [ pool-1-thread-1:8 ] - [ DEBUG ]  count == 1
+2016-06-11 12:19:12  [ main:0 ] - [ DEBUG ]  init
+2016-06-11 12:19:12  [ pool-1-thread-1:4 ] - [ DEBUG ]  loop
+2016-06-11 12:19:12  [ pool-1-thread-1:6 ] - [ DEBUG ]  count == 1
+2016-06-11 12:19:12  [ pool-2-thread-1:6 ] - [ DEBUG ]  mytask
+2016-06-11 12:19:22  [ pool-2-thread-1:10040 ] - [ DEBUG ]  back
+hello world!!!
+2016-06-11 12:20:17  [ main:0 ] - [ DEBUG ]  init
+2016-06-11 12:20:17  [ pool-1-thread-1:5 ] - [ DEBUG ]  loop
+2016-06-11 12:20:17  [ pool-1-thread-1:7 ] - [ DEBUG ]  count == 1
+2016-06-11 12:20:17  [ pool-2-thread-1:8 ] - [ DEBUG ]  mytask
+2016-06-11 12:20:17  [ pool-2-thread-1:8 ] - [ DEBUG ]  1
+2016-06-11 12:20:18  [ pool-2-thread-1:1013 ] - [ DEBUG ]  2
+2016-06-11 12:20:19  [ pool-2-thread-1:2018 ] - [ DEBUG ]  3
+2016-06-11 12:20:20  [ pool-2-thread-1:3023 ] - [ DEBUG ]  4
+2016-06-11 12:20:21  [ pool-2-thread-1:4028 ] - [ DEBUG ]  5
+2016-06-11 12:20:22  [ pool-2-thread-1:5033 ] - [ DEBUG ]  6
+2016-06-11 12:20:23  [ pool-2-thread-1:6034 ] - [ DEBUG ]  7
+2016-06-11 12:20:24  [ pool-2-thread-1:7039 ] - [ DEBUG ]  8
+2016-06-11 12:20:26  [ pool-2-thread-1:8044 ] - [ DEBUG ]  9
+2016-06-11 12:20:27  [ pool-2-thread-1:9045 ] - [ DEBUG ]  10
+2016-06-11 12:20:28  [ pool-2-thread-1:10051 ] - [ DEBUG ]  back
+hello world!!!
+2016-06-11 13:15:11  [ main:0 ] - [ DEBUG ]  init
+2016-06-11 13:15:11  [ pool-1-thread-1:5 ] - [ DEBUG ]  loop
+2016-06-11 13:15:11  [ pool-1-thread-1:7 ] - [ DEBUG ]  count == 1
+2016-06-11 13:15:11  [ pool-2-thread-1:8 ] - [ DEBUG ]  mytask
+2016-06-11 13:15:11  [ pool-2-thread-1:9 ] - [ DEBUG ]  1
+2016-06-11 13:15:12  [ pool-2-thread-1:1014 ] - [ DEBUG ]  2
+2016-06-11 13:15:13  [ pool-2-thread-1:2016 ] - [ DEBUG ]  3
+2016-06-11 13:15:14  [ pool-2-thread-1:3021 ] - [ DEBUG ]  4
+2016-06-11 13:15:15  [ pool-2-thread-1:4025 ] - [ DEBUG ]  5
+2016-06-11 13:15:16  [ pool-2-thread-1:5030 ] - [ DEBUG ]  6
+2016-06-11 13:15:17  [ pool-2-thread-1:6036 ] - [ DEBUG ]  7
+2016-06-11 13:15:18  [ pool-2-thread-1:7040 ] - [ DEBUG ]  8
+2016-06-11 13:15:19  [ pool-2-thread-1:8045 ] - [ DEBUG ]  9
+2016-06-11 13:15:20  [ pool-2-thread-1:9049 ] - [ DEBUG ]  10
+2016-06-11 13:15:21  [ pool-2-thread-1:10055 ] - [ DEBUG ]  back
+hello world!!!
+2016-06-11 13:16:07  [ main:0 ] - [ DEBUG ]  init
+2016-06-11 13:16:07  [ pool-1-thread-1:6 ] - [ DEBUG ]  loop
+2016-06-11 13:16:07  [ pool-1-thread-1:7 ] - [ DEBUG ]  count == 1
+2016-06-11 13:16:07  [ pool-2-thread-1:9 ] - [ DEBUG ]  mytask
+2016-06-11 13:16:07  [ pool-2-thread-1:9 ] - [ DEBUG ]  1
+2016-06-11 13:16:08  [ pool-2-thread-1:1014 ] - [ DEBUG ]  2
+2016-06-11 13:16:09  [ pool-2-thread-1:2014 ] - [ DEBUG ]  3
+2016-06-11 13:16:10  [ pool-2-thread-1:3018 ] - [ DEBUG ]  4
+2016-06-11 13:16:11  [ pool-2-thread-1:4023 ] - [ DEBUG ]  5
+2016-06-11 13:16:12  [ pool-2-thread-1:5025 ] - [ DEBUG ]  6
+2016-06-11 13:16:13  [ pool-2-thread-1:6029 ] - [ DEBUG ]  7
+2016-06-11 13:16:14  [ pool-2-thread-1:7036 ] - [ DEBUG ]  8
+2016-06-11 13:16:15  [ pool-2-thread-1:8040 ] - [ DEBUG ]  9
+2016-06-11 13:16:16  [ pool-2-thread-1:9045 ] - [ DEBUG ]  10
+2016-06-11 13:16:17  [ pool-2-thread-1:10049 ] - [ DEBUG ]  back
+hello world!!!
+2016-06-11 13:47:18  [ main:0 ] - [ DEBUG ]  init
+2016-06-11 13:47:18  [ pool-1-thread-1:6 ] - [ DEBUG ]  loop
+2016-06-11 13:47:18  [ pool-1-thread-1:9 ] - [ DEBUG ]  count == 1
+2016-06-11 13:47:18  [ pool-2-thread-1:10 ] - [ DEBUG ]  mytask
+2016-06-11 13:47:18  [ pool-2-thread-1:10 ] - [ DEBUG ]  1
+2016-06-11 13:47:19  [ pool-2-thread-1:1016 ] - [ DEBUG ]  2
+2016-06-11 13:47:20  [ pool-2-thread-1:2020 ] - [ DEBUG ]  3
+2016-06-11 13:47:21  [ pool-2-thread-1:3021 ] - [ DEBUG ]  4
+2016-06-11 13:47:22  [ pool-2-thread-1:4024 ] - [ DEBUG ]  5
+2016-06-11 13:47:23  [ pool-2-thread-1:5026 ] - [ DEBUG ]  6
+2016-06-11 13:47:24  [ pool-2-thread-1:6031 ] - [ DEBUG ]  7
+2016-06-11 13:47:25  [ pool-2-thread-1:7036 ] - [ DEBUG ]  8
+2016-06-11 13:47:26  [ pool-2-thread-1:8041 ] - [ DEBUG ]  9
+2016-06-11 13:47:27  [ pool-2-thread-1:9046 ] - [ DEBUG ]  10
+2016-06-11 13:47:28  [ pool-2-thread-1:10051 ] - [ DEBUG ]  back
+hello world!!!
+2016-06-11 13:52:48  [ main:0 ] - [ DEBUG ]  init
+2016-06-11 13:52:48  [ pool-1-thread-1:5 ] - [ DEBUG ]  loop
+2016-06-11 13:52:48  [ pool-1-thread-1:7 ] - [ DEBUG ]  count == 1
+2016-06-11 13:52:48  [ pool-2-thread-1:7 ] - [ DEBUG ]  mytask
+2016-06-11 13:52:48  [ pool-2-thread-1:8 ] - [ DEBUG ]  back
+hello world
+2016-06-11 13:52:48  [ pool-2-thread-1:8 ] - [ DEBUG ]  1
+2016-06-11 13:52:49  [ pool-2-thread-1:1011 ] - [ DEBUG ]  2
+2016-06-11 13:52:50  [ pool-2-thread-1:2013 ] - [ DEBUG ]  3
+2016-06-11 13:52:51  [ pool-2-thread-1:3017 ] - [ DEBUG ]  4
+2016-06-11 13:52:52  [ pool-2-thread-1:4023 ] - [ DEBUG ]  5
+2016-06-11 13:52:53  [ pool-2-thread-1:5028 ] - [ DEBUG ]  6
+2016-06-11 13:52:54  [ pool-2-thread-1:6033 ] - [ DEBUG ]  7
+2016-06-11 13:52:55  [ pool-2-thread-1:7039 ] - [ DEBUG ]  8
+2016-06-11 13:52:56  [ pool-2-thread-1:8039 ] - [ DEBUG ]  9
+2016-06-11 13:52:57  [ pool-2-thread-1:9042 ] - [ DEBUG ]  10
+2016-06-11 13:54:18  [ main:0 ] - [ DEBUG ]  init
+2016-06-11 13:54:18  [ pool-1-thread-1:5 ] - [ DEBUG ]  loop
+2016-06-11 13:54:18  [ pool-1-thread-1:25 ] - [ DEBUG ]  loop
+2016-06-11 13:54:18  [ pool-1-thread-1:26 ] - [ DEBUG ]  count == 1

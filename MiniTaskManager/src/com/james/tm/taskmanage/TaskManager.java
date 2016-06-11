@@ -12,19 +12,20 @@ import com.james.tm.task.Task;
 public class TaskManager {
 
 	public TaskManager() {
-
+			
 	}
 
 	public static int addTask(Task task) {
-
-		return TaskBlockingQueue.getInstance().add(task);
+		if (MtmManager.taskBlockingQueue == null)
+			throw new NullPointerException(" taskBlockingQueue is null or mtmManager not init");
+		return MtmManager.taskBlockingQueue.add(task);
 
 	}
 
 	public static int cancelTask(Task task) {
-
-		return TaskBlockingQueue.getInstance().cancel(task);
+		if (MtmManager.taskBlockingQueue == null)
+			throw new NullPointerException(" taskBlockingQueue is null or mtmManager not init");
+		return MtmManager.taskBlockingQueue.cancel(task);
 	}
-	
 
 }

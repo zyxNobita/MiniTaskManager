@@ -51,7 +51,10 @@ public class BlockingQueueFactory extends AbstractBlockingQueueFactory {
 		MessageBlockingQueue.getInstace()
 				.initExecutors(singleExecutors, cacheExecutors).init();
 	}
-
+	
+	public void stop(){
+	}
+	
 	public static class Builder {
 		private ExecutorService singleExecutors;
 
