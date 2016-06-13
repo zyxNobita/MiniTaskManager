@@ -2,6 +2,7 @@ package com.james.tm.taskmanage;
 
 import java.util.concurrent.ExecutorService;
 
+import com.james.tm.executor.service.MiniExecutorService;
 import com.james.tm.queue.BlockingQueueFactory;
 import com.james.tm.queue.TaskBlockingQueue;
 
